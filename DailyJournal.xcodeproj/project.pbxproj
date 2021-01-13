@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		DB85F1F525AEA35900EABCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F1F425AEA35900EABCCA /* AppDelegate.swift */; };
 		DB85F1F725AEA35900EABCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F1F625AEA35900EABCCA /* SceneDelegate.swift */; };
-		DB85F1F925AEA35900EABCCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F1F825AEA35900EABCCA /* ViewController.swift */; };
 		DB85F1FC25AEA35900EABCCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB85F1FA25AEA35900EABCCA /* Main.storyboard */; };
 		DB85F1FF25AEA35900EABCCA /* DailyJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB85F1FD25AEA35900EABCCA /* DailyJournal.xcdatamodeld */; };
 		DB85F20125AEA35C00EABCCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB85F20025AEA35C00EABCCA /* Assets.xcassets */; };
 		DB85F20425AEA35C00EABCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB85F20225AEA35C00EABCCA /* LaunchScreen.storyboard */; };
 		DB85F20F25AEA35C00EABCCA /* DailyJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F20E25AEA35C00EABCCA /* DailyJournalTests.swift */; };
 		DB85F21A25AEA35C00EABCCA /* DailyJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F21925AEA35C00EABCCA /* DailyJournalUITests.swift */; };
+		DB85F22E25AF3F4000EABCCA /* JournalEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		DB85F1F125AEA35900EABCCA /* DailyJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB85F1F425AEA35900EABCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB85F1F625AEA35900EABCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB85F1F825AEA35900EABCCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB85F1FB25AEA35900EABCCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB85F1FE25AEA35900EABCCA /* DailyJournal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyJournal.xcdatamodel; sourceTree = "<group>"; };
 		DB85F20025AEA35C00EABCCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		DB85F21525AEA35C00EABCCA /* DailyJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB85F21925AEA35C00EABCCA /* DailyJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITests.swift; sourceTree = "<group>"; };
 		DB85F21B25AEA35C00EABCCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,12 @@
 			children = (
 				DB85F1F425AEA35900EABCCA /* AppDelegate.swift */,
 				DB85F1F625AEA35900EABCCA /* SceneDelegate.swift */,
-				DB85F1F825AEA35900EABCCA /* ViewController.swift */,
 				DB85F1FA25AEA35900EABCCA /* Main.storyboard */,
 				DB85F20025AEA35C00EABCCA /* Assets.xcassets */,
 				DB85F20225AEA35C00EABCCA /* LaunchScreen.storyboard */,
 				DB85F20525AEA35C00EABCCA /* Info.plist */,
 				DB85F1FD25AEA35900EABCCA /* DailyJournal.xcdatamodeld */,
+				DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */,
 			);
 			path = DailyJournal;
 			sourceTree = "<group>";
@@ -261,9 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB85F1F925AEA35900EABCCA /* ViewController.swift in Sources */,
 				DB85F1F525AEA35900EABCCA /* AppDelegate.swift in Sources */,
 				DB85F1F725AEA35900EABCCA /* SceneDelegate.swift in Sources */,
+				DB85F22E25AF3F4000EABCCA /* JournalEntriesTableViewController.swift in Sources */,
 				DB85F1FF25AEA35900EABCCA /* DailyJournal.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
