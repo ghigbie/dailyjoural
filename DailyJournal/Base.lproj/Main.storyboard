@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <datePicker key="tableFooterView" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="p1y-Vw-9S0">
+                            <rect key="frame" x="0.0" y="100" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        </datePicker>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="uqS-fb-PAe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -32,6 +36,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Daily Journal" id="Ve0-IR-NTL">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="sUA-H8-GmG"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="VVJ-oU-d7H">
                             <connections>
                                 <segue destination="I7g-ka-x4M" kind="show" id="71n-Gh-nGD"/>
@@ -50,16 +55,29 @@
                     <view key="view" contentMode="scaleToFill" id="XeM-uv-DgI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="E5L-Tc-zZ3">
+                                <rect key="frame" x="20" y="108" width="374" height="177"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T0A-zV-GBH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E5L-Tc-zZ3" firstAttribute="trailing" secondItem="T0A-zV-GBH" secondAttribute="trailing" constant="20" id="c8Z-qa-LNr"/>
+                            <constraint firstItem="E5L-Tc-zZ3" firstAttribute="leading" secondItem="T0A-zV-GBH" secondAttribute="leading" constant="20" id="kqk-hv-X1f"/>
+                            <constraint firstItem="E5L-Tc-zZ3" firstAttribute="top" secondItem="T0A-zV-GBH" secondAttribute="top" constant="20" id="tzQ-6F-9rE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HMU-oS-W7u">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MK3-It-d13"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="38A-Hc-Ujl">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xvh-TQ-FAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="-382"/>
+            <point key="canvasLocation" x="124.6376811594203" y="-382.36607142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nht-ZO-rbv">
@@ -83,6 +101,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
