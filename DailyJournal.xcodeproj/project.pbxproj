@@ -15,7 +15,9 @@
 		DB85F20425AEA35C00EABCCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB85F20225AEA35C00EABCCA /* LaunchScreen.storyboard */; };
 		DB85F20F25AEA35C00EABCCA /* DailyJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F20E25AEA35C00EABCCA /* DailyJournalTests.swift */; };
 		DB85F21A25AEA35C00EABCCA /* DailyJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F21925AEA35C00EABCCA /* DailyJournalUITests.swift */; };
-		DB85F22E25AF3F4000EABCCA /* JournalEntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */; };
+		DB85F22E25AF3F4000EABCCA /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F22D25AF3F4000EABCCA /* EntriesTableViewController.swift */; };
+		DB85F23325B2210300EABCCA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F23225B2210300EABCCA /* Entry.swift */; };
+		DB85F24525B227BF00EABCCA /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F24425B227BF00EABCCA /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,9 @@
 		DB85F21525AEA35C00EABCCA /* DailyJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB85F21925AEA35C00EABCCA /* DailyJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITests.swift; sourceTree = "<group>"; };
 		DB85F21B25AEA35C00EABCCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntriesTableViewController.swift; sourceTree = "<group>"; };
+		DB85F22D25AF3F4000EABCCA /* EntriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		DB85F23225B2210300EABCCA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		DB85F24425B227BF00EABCCA /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		DB85F1F325AEA35900EABCCA /* DailyJournal */ = {
 			isa = PBXGroup;
 			children = (
+				DB85F24025B223CF00EABCCA /* model */,
+				DB85F23F25B223C000EABCCA /* controllers */,
 				DB85F1F425AEA35900EABCCA /* AppDelegate.swift */,
 				DB85F1F625AEA35900EABCCA /* SceneDelegate.swift */,
 				DB85F1FA25AEA35900EABCCA /* Main.storyboard */,
@@ -108,7 +114,6 @@
 				DB85F20225AEA35C00EABCCA /* LaunchScreen.storyboard */,
 				DB85F20525AEA35C00EABCCA /* Info.plist */,
 				DB85F1FD25AEA35900EABCCA /* DailyJournal.xcdatamodeld */,
-				DB85F22D25AF3F4000EABCCA /* JournalEntriesTableViewController.swift */,
 			);
 			path = DailyJournal;
 			sourceTree = "<group>";
@@ -129,6 +134,23 @@
 				DB85F21B25AEA35C00EABCCA /* Info.plist */,
 			);
 			path = DailyJournalUITests;
+			sourceTree = "<group>";
+		};
+		DB85F23F25B223C000EABCCA /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB85F22D25AF3F4000EABCCA /* EntriesTableViewController.swift */,
+				DB85F24425B227BF00EABCCA /* EntryViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		DB85F24025B223CF00EABCCA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB85F23225B2210300EABCCA /* Entry.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +283,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB85F23325B2210300EABCCA /* Entry.swift in Sources */,
 				DB85F1F525AEA35900EABCCA /* AppDelegate.swift in Sources */,
 				DB85F1F725AEA35900EABCCA /* SceneDelegate.swift in Sources */,
-				DB85F22E25AF3F4000EABCCA /* JournalEntriesTableViewController.swift in Sources */,
+				DB85F22E25AF3F4000EABCCA /* EntriesTableViewController.swift in Sources */,
 				DB85F1FF25AEA35900EABCCA /* DailyJournal.xcdatamodeld in Sources */,
+				DB85F24525B227BF00EABCCA /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

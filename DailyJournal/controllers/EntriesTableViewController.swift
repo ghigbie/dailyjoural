@@ -7,9 +7,9 @@
 
 import UIKit
 
-class JournalEntriesTableViewController: UITableViewController {
+class EntriesTableViewController: UITableViewController {
 
-    let dates = [1,2,3,4,5,6,7,8,9]
+    var entries: [Entry] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,7 @@ class JournalEntriesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        let date = String(dates[indexPath.row])
-        cell.textLabel?.text = date
+        cell.textLabel?.text = "moo"
         
         return cell
     }
