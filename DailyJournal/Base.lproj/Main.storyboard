@@ -69,9 +69,8 @@
                         <constraints>
                             <constraint firstItem="E5L-Tc-zZ3" firstAttribute="centerX" secondItem="XeM-uv-DgI" secondAttribute="centerX" id="245-ez-y6T"/>
                             <constraint firstItem="E5L-Tc-zZ3" firstAttribute="top" secondItem="T0A-zV-GBH" secondAttribute="top" constant="20" id="H5b-c0-pkw"/>
-                            <constraint firstItem="wKK-wU-NdM" firstAttribute="top" secondItem="E5L-Tc-zZ3" secondAttribute="bottom" constant="20" id="NMR-NP-4NH"/>
-                            <constraint firstItem="T0A-zV-GBH" firstAttribute="trailing" secondItem="wKK-wU-NdM" secondAttribute="trailing" constant="20" id="R0p-WY-FKI"/>
-                            <constraint firstItem="wKK-wU-NdM" firstAttribute="leading" secondItem="T0A-zV-GBH" secondAttribute="leading" constant="20" id="s9Q-OZ-d4e"/>
+                            <constraint firstItem="wKK-wU-NdM" firstAttribute="top" secondItem="E5L-Tc-zZ3" secondAttribute="bottom" constant="20" id="Stx-dl-a9e"/>
+                            <constraint firstItem="wKK-wU-NdM" firstAttribute="centerX" secondItem="XeM-uv-DgI" secondAttribute="centerX" id="dEI-xU-sN3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HMU-oS-W7u">

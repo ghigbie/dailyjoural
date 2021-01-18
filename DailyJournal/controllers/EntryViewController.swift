@@ -1,18 +1,12 @@
-//
-//  EntryViewController.swift
-//  DailyJournal
-//
-//  Created by George Higbie on 1/15/21.
-//
-
 import UIKit
+
 
 class EntryViewController: UIViewController {
     
-    
     @IBOutlet weak var datePicker: UIDatePicker!
-    
     @IBOutlet weak var entryTextView: UITextView!
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +15,13 @@ class EntryViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
-       let entry = Entry()
-        entry.date = datePicker.date
-        entry.text = entryTextView.text
-        
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let entry = Entry(context: context)
+            entry.date = datePicker.date
+            entry.text = entryTextView.text
+            (UIApplication.shared.delegate as? AppDelegate)?.saveContext() //explicitly saves into core data
+        }
+    
     }
 
     /*
