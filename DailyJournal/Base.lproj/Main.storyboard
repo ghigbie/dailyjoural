@@ -35,7 +35,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="sUA-H8-GmG"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="compose" id="VVJ-oU-d7H">
                             <connections>
-                                <segue destination="I7g-ka-x4M" kind="show" id="71n-Gh-nGD"/>
+                                <segue destination="I7g-ka-x4M" kind="show" identifier="segueToEntry" id="71n-Gh-nGD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,10 +55,9 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="E5L-Tc-zZ3">
                                 <rect key="frame" x="47" y="108" width="320" height="216"/>
                             </datePicker>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKK-wU-NdM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="...Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, ...." translatesAutoresizingMaskIntoConstraints="NO" id="wKK-wU-NdM">
                                 <rect key="frame" x="20" y="344" width="374" height="498"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">...Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -68,15 +67,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="E5L-Tc-zZ3" firstAttribute="centerX" secondItem="XeM-uv-DgI" secondAttribute="centerX" id="245-ez-y6T"/>
+                            <constraint firstItem="wKK-wU-NdM" firstAttribute="leading" secondItem="T0A-zV-GBH" secondAttribute="leading" constant="20" id="5T2-pt-Gt6"/>
                             <constraint firstItem="E5L-Tc-zZ3" firstAttribute="top" secondItem="T0A-zV-GBH" secondAttribute="top" constant="20" id="H5b-c0-pkw"/>
+                            <constraint firstItem="T0A-zV-GBH" firstAttribute="trailing" secondItem="wKK-wU-NdM" secondAttribute="trailing" constant="20" id="Ir4-oH-a2L"/>
+                            <constraint firstItem="T0A-zV-GBH" firstAttribute="bottom" secondItem="wKK-wU-NdM" secondAttribute="bottom" constant="20" id="LVy-gX-0F0"/>
                             <constraint firstItem="wKK-wU-NdM" firstAttribute="top" secondItem="E5L-Tc-zZ3" secondAttribute="bottom" constant="20" id="Stx-dl-a9e"/>
-                            <constraint firstItem="wKK-wU-NdM" firstAttribute="centerX" secondItem="XeM-uv-DgI" secondAttribute="centerX" id="dEI-xU-sN3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HMU-oS-W7u">
                         <barButtonItem key="backBarButtonItem" title="Back" id="MK3-It-d13"/>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="trash" id="38A-Hc-Ujl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="48J-h4-yrs">
                             <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="I7g-ka-x4M" id="XuL-aa-ANC"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

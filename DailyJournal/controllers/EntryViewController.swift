@@ -6,20 +6,29 @@ class EntryViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var entryTextView: UITextView!
 
-    
+    var entry: Entry?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if entry == nil {
+            entryTextView.text = "Please provide a journal entry here!"
+        }else{
+            entryTextView.text = entry!.text
+            if let dateToBeShown = entry!.date {
+                datePicker.date = dateToBeShown
+            }
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-            let entry = Entry(context: context)
-            entry.date = datePicker.date
-            entry.text = entryTextView.text
-            (UIApplication.shared.delegate as? AppDelegate)?.saveContext() //explicitly saves into core data
+        if entry == nil {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                let entry = Entry(context: context)
+                entry.date = datePicker.date
+                entry.text = entryTextView.text
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext() //explicitly saves into core data
+            }
         }
     
     }
@@ -34,4 +43,14 @@ class EntryViewController: UIViewController {
     }
     */
 
+    @IBAction func deleteTapped(_ sender: Any) {
+        if entry != nil {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                context.delete(entry!)
+            }
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
 }

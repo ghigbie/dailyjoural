@@ -111,8 +111,6 @@
 				DB85F23F25B223C000EABCCA /* controllers */,
 				DB85F1F425AEA35900EABCCA /* AppDelegate.swift */,
 				DB85F1F625AEA35900EABCCA /* SceneDelegate.swift */,
-				DB85F27425B5495100EABCCA /* Entry+CoreDataClass.swift */,
-				DB85F27525B5495100EABCCA /* Entry+CoreDataProperties.swift */,
 				DB85F1FA25AEA35900EABCCA /* Main.storyboard */,
 				DB85F20025AEA35C00EABCCA /* Assets.xcassets */,
 				DB85F20225AEA35C00EABCCA /* LaunchScreen.storyboard */,
@@ -152,6 +150,8 @@
 		DB85F24025B223CF00EABCCA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				DB85F27425B5495100EABCCA /* Entry+CoreDataClass.swift */,
+				DB85F27525B5495100EABCCA /* Entry+CoreDataProperties.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";

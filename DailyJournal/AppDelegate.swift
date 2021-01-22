@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  DailyJournal
-//
-//  Created by George Higbie on 1/12/21.
-//
 
 import UIKit
 import CoreData

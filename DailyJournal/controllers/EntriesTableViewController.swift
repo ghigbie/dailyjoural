@@ -15,6 +15,23 @@ class EntriesTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext{
+            if let entriesFromCoreData = try? context.fetch(Entry.fetchRequest()) as? [Entry]{
+                entries = entriesFromCoreData
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = entries[indexPath.row]
+        performSegue(withIdentifier: "segueToEntry", sender: entry)
+    }
+    
+
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return entries.count
@@ -31,7 +48,9 @@ class EntriesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let entryVC = segue.destination as? EntryViewController {
-            entryVC.entriesVC = self
+            if let entryToBeSent = sender as? Entry{
+                entryVC.entry = entryToBeSent
+            }
         }
     }
 
